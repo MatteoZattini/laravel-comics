@@ -14,9 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        "film" => config("store")
+    ];
+        
+    return view('home', $data);
 });
 
 Route::get('/home', function () {
-    return view('home');
+    $data = [
+        "film" => config("store")
+    ];
+    return view('home', $data);
 });

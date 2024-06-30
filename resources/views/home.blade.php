@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    @foreach ($film as $item)
+        {{ $item['title'] }}
+    @endforeach
 </body>
 </html>
