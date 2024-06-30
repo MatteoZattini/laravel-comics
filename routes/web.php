@@ -27,3 +27,10 @@ Route::get('/home', function () {
     ];
     return view('home', $data);
 });
+
+Route::get('/about', function () {
+    $data = [
+        "film" => config("store")
+    ];
+    return view('about', $data);
+});
