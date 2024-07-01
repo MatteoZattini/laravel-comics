@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+}
+
+.white {
+    color: white;
+}
+
+footer {
+    background-color: #222;
+    height: 3rem;
+}
+
+header {
+    background-color: #222;
+    height: 5rem;
+}
+
+header a {
+    margin-right: 1rem;
+}
