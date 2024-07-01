@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -9,7 +9,6 @@
             <img src="{{ $item['thumb'] }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <a href="/about/{{ $indice }}"><h5 class="card-title">{{ $item['title'] }}</h5></a>
-              
             </div>
           </div>
            @endforeach

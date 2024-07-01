@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between white">
                 <div>COMICS</div>
+                <span>Attualmente sei in: {{ Route::currentRouteName() }}</span>
                 <div class="">
                     <a href="{{ route('home') }}">Home</a>
                     <a href="">About</a>
