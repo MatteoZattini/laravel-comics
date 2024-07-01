@@ -34,6 +34,9 @@ Route::get('/about/{indice}', function ($indice) {
     $fumettodata = [
         "fumetto" => $singolofumetto
     ];
-
-    return view('about', $fumettodata);
+    if( array_key_exists($indice, $data)) {
+        return view('about', $fumettodata);
+    } else {
+        abort(404, 'not found');
+    }
 })->name('about');
