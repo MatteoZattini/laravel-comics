@@ -4,7 +4,7 @@
             <div class="col-12 d-flex justify-content-between white">
                 <div>COMICS</div>
                 <div class="">
-                    <a href="">Home</a>
+                    <a href="{{ route('home') }}">Home</a>
                     <a href="">About</a>
                 </div>
             </div>

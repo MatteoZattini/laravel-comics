@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>Document</title>
-</head>
-<body>
-    @include('partials.header')
+@extends('layout.app')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex flex-wrap">
-               @foreach ($film as $item)
-               <div class="card" style="width: 18rem;">
-                <img src="{{ $item['thumb'] }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href=""><h5 class="card-title">{{ $item['title'] }}</h5></a>
-                  
-                </div>
-              </div>
-               @endforeach
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex flex-wrap">
+           @foreach ($fumetti as $indice => $item)
+           <div class="card" style="width: 18rem;">
+            <img src="{{ $item['thumb'] }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="/about/{{ $indice }}"><h5 class="card-title">{{ $item['title'] }}</h5></a>
+              
             </div>
+          </div>
+           @endforeach
         </div>
     </div>
-    
-    @include('partials.footer')
-</body>
-</html>
+</div>
+@endsection

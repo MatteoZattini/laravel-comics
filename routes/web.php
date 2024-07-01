@@ -14,23 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
-        "film" => config("store")
-    ];
-        
+
+    $data = config("store");
+
     return view('home', $data);
-});
+})->name('home');
 
 Route::get('/home', function () {
-    $data = [
-        "film" => config("store")
-    ];
-    return view('home', $data);
-});
 
-Route::get('/about', function () {
-    $data = [
-        "film" => config("store")
+    $data = config("store");
+
+    return view('home', $data);
+})->name('home');
+
+Route::get('/about/{indice}', function ($indice) {
+
+    $data = config("store.fumetti");
+    $singolofumetto = $data[$indice];
+    $fumettodata = [
+        "fumetto" => $singolofumetto
     ];
-    return view('about', $data);
-});
+
+    return view('about', $fumettodata);
+})->name('about');
