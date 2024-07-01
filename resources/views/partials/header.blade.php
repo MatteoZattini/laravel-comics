@@ -5,8 +5,18 @@
                 <div>COMICS</div>
                 <span>Attualmente sei in: {{ Route::currentRouteName() }}</span>
                 <div class="">
-                    <a href="{{ route('home') }}">Home</a>
-                    <a href="">About</a>
+
+                        @if (Route::currentRouteName() == 'home')
+                        <a class="active" href="{{ route('home') }}">Home</a>
+                        @else
+                        <a class="" href="{{ route('home') }}">Home</a>
+                        @endif
+
+                        {{-- @if (Route::currentRouteName() == 'about/{indice}')
+                        <a class="active" href="{{ route('about') }}">About</a>
+                        @else
+                        <a href="{{ route('about') }}">About</a>
+                        @endif --}}
                 </div>
             </div>
         </div>

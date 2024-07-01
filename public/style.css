@@ -19,3 +19,7 @@ header {
 header a {
     margin-right: 1rem;
 }
+
+.active {
+    text-decoration: underline;
+}
